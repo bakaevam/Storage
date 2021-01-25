@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/text_to_save"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="32dp"
+        android:hint="Text to save"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/clear_button"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toTopOf="@id/linear_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_to_save"
+        android:backgroundTint="#EA4848"
+        android:text="clear"/>
+
+    <RelativeLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_to_save">
+
+        <Button
+            android:id="@+id/prefs_save"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#72ADDA"
+            android:layout_margin="16dp"
+            android:text="Save to prefs"/>
+
+        <Button
+            android:id="@+id/internal_save"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#72ADDA"
+            android:layout_margin="16dp"
+            android:text="Save internal"
+            android:layout_below="@+id/prefs_save"/>
+
+        <Button
+            android:id="@+id/external_save"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#72ADDA"
+            android:layout_margin="16dp"
+            android:text="Save external"
+            android:layout_below="@+id/internal_save"/>
+
+        <Button
+            android:id="@+id/db_save"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#72ADDA"
+            android:layout_margin="16dp"
+            android:text="Save to db"
+            android:layout_below="@+id/external_save"/>
+
+        <Button
+            android:id="@+id/db_load"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#72ADDA"
+            android:layout_margin="16dp"
+            android:text="load from db"
+            android:layout_below="@+id/external_save"
+            android:layout_alignParentEnd="true"/>
+
+        <Button
+            android:id="@+id/external_load"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#72ADDA"
+            android:layout_margin="16dp"
+            android:text="load external"
+            android:layout_below="@+id/internal_save"
+            android:layout_alignParentEnd="true"/>
+
+        <Button
+            android:id="@+id/internal_load"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#72ADDA"
+            android:layout_margin="16dp"
+            android:text="load internal"
+            android:layout_below="@+id/prefs_save"
+            android:layout_alignParentEnd="true"/>
+
+        <Button
+            android:id="@+id/prefs_load"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#72ADDA"
+            android:layout_margin="16dp"
+            android:text="load from prefs"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
