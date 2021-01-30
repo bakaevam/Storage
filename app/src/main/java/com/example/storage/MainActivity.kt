@@ -142,6 +142,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
     private fun checkPermission(permission: String): CheckPermissionResult {
         return when {
             Build.VERSION.SDK_INT < Build.VERSION_CODES.M -> CheckPermissionResult.GRANTED
@@ -243,4 +244,5 @@ class MainActivity : AppCompatActivity() {
         NEED_TO_REQUEST,
         NEED_TO_EXPLAIN
     }
+
 }
